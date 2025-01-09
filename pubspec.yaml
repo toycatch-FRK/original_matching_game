@@ -1,0 +1,43 @@
+name: original_matching_game
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.1.0+2
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  image_picker: ^0.8.7+3
+  audioplayers: ^6.1.0
+
+  cupertino_icons: ^1.0.6
+
+  google_mobile_ads: ^2.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_launcher_icons: ^0.9.2
+  flutter_lints: ^3.0.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/app_icon.png"  # アイコンのパス
+  remove_alpha_ios: true
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/sounds/card_flip.mp3
+    - assets/sounds/pair_match.mp3
+    - assets/sounds/game_clear.mp3
+    - assets/sounds/wrong_pair.mp3
+    - assets/star.png
+    - assets/heart.png
