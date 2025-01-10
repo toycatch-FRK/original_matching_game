@@ -28,7 +28,8 @@ class _GameScreenState extends State<GameScreen> {
     _interstitialAd = null;
 
     InterstitialAd.load(
-      adUnitId: 'ca-app-pub-8946560300471397/1989907543', // テスト用広告ユニットID
+      adUnitId: 'ca-app-pub-8946560300471397/1989907543',
+      // adUnitId: 'ca-app-pub-3940256099942544/1033173712',//test
       request: AdRequest(),
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (ad) {

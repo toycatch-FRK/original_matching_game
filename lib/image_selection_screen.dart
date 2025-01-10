@@ -26,7 +26,8 @@ class _ImageSelectionScreenState extends State<ImageSelectionScreen> {
 
   void _loadBannerAd() {
     _bannerAd = BannerAd(
-      adUnitId: 'ca-app-pub-8946560300471397/3781663067', // テスト用広告ユニットID
+      adUnitId: 'ca-app-pub-8946560300471397/3781663067',
+      // adUnitId: 'ca-app-pub-3940256099942544/6300978111',//test
       size: AdSize.banner,
       request: AdRequest(),
       listener: BannerAdListener(
@@ -258,12 +259,22 @@ class _ImageSelectionScreenState extends State<ImageSelectionScreen> {
 
           if (_isAdLoaded)
             Container(
-              alignment: Alignment.center, // 広告を中央に配置
-              width: MediaQuery.of(context).size.width, // 横幅を画面幅に合わせる
-              height: _bannerAd!.size.height.toDouble(), // 高さは広告サイズに合わせる
+              alignment: Alignment.center,
+              width: MediaQuery.of(context).size.width,
+              height: _bannerAd!.size.height.toDouble(),
               child: AdWidget(ad: _bannerAd!),
+            )
+          else
+            Container(
+              alignment: Alignment.center,
+              width: MediaQuery.of(context).size.width,
+              height: 50.0, // 広告の高さと同じ
+              color: Colors.grey, // グレーの背景色
+              child: Text(
+                '広告スペース',
+                style: TextStyle(color: Colors.white, fontSize: 16.0),
+              ),
             ),
-
         ],
       ),
     );
